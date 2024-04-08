@@ -7,13 +7,13 @@ teclado = keyboard.Keyboard()
 mouse = mouse.Mouse()
 players = []
 
-qt = Sprite("buttons/sair.png")
-qt.set_position(janela.width - qt.width - 50, janela.height - qt.height - 50)
+sair = Sprite("buttons/sair.png")
+sair.set_position(janela.width - sair.width - 50, janela.height - sair.height - 50)
 
-qtred = Sprite("buttons/sairblue.png")
-qtred.x = janela.width/2 - qtred.width/2.3
-qtred.y = janela.height/1.25
-qtred.set_position(janela.width - qtred.width - 50, janela.height - qtred.height - 50)
+sairRed = Sprite("buttons/sairblue.png")
+sairRed.x = janela.width/2 - sairRed.width/2.3
+sairRed.y = janela.height/1.25
+sairRed.set_position(janela.width - sairRed.width - 50, janela.height - sairRed.height - 50)
 
 
 def sort(player):
@@ -97,12 +97,12 @@ def tela_ranking(point):
             if i == 5:
                 break
             janela.draw_text(player[i], janela.width / 2 - 140, 50 + 80 * (i + 1), size=75, color=(255, 255, 255))
-        if (mouse.is_over_object(qt)):
-            qt.hide()
-            qtred.draw()
+        if (mouse.is_over_object(sair)):
+            sair.hide()
+            sairRed.draw()
             if (mouse.is_button_pressed(1)):
                 return True
         else:
-            qt.unhide()
-        qt.draw()
+            sair.unhide()
+        sair.draw()
         janela.update()

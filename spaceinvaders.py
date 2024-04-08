@@ -26,13 +26,13 @@ jogarblue = Sprite("buttons/jogarblue.png")
 jogarblue.x = janela.width / 2 - jogarblue.width / 2
 jogarblue.y = janela.height / 1.48 + 50
 
-rk = Sprite("buttons/rank.png")
-rk.x = janela.width / 2 - rk.width / 2
-rk.y = janela.height / 1.32 + 50
+rank = Sprite("buttons/rank.png")
+rank.x = janela.width / 2 - rank.width / 2
+rank.y = janela.height / 1.32 + 50
 
-rkblue = Sprite("buttons/rkblue.png")
-rkblue.x = janela.width / 2 - rkblue.width / 2
-rkblue.y = janela.height / 1.32 + 50
+rankblue = Sprite("buttons/rkblue.png")
+rankblue.x = janela.width / 2 - rankblue.width / 2
+rankblue.y = janela.height / 1.32 + 50
 
 sair = Sprite("buttons/sair.png")
 sair.x = janela.width / 2 - sair.width / 2
@@ -57,14 +57,14 @@ while True:
     else:
         jogar.unhide()
 
-    if (mouse.is_over_object(rk)):
-        rk.hide()
-        rkblue.draw()
+    if (mouse.is_over_object(rank)):
+        rank.hide()
+        rankblue.draw()
         if (mouse.is_button_pressed(1)):
             pontos = [-1]
             tela_ranking(pontos)
     else:
-        rk.unhide()
+        rank.unhide()
 
     if (mouse.is_over_object(sair)):
         sair.hide()
@@ -77,7 +77,7 @@ while True:
     nave.draw()
     logo.draw()
     jogar.draw()
-    rk.draw()
+    rank.draw()
     sair.draw()
     janela.update()
 
